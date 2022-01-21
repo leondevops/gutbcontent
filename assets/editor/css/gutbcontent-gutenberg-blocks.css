@@ -1,0 +1,63 @@
+/**
+*    @Package devsunsettheme
+* * Need to test the code in the actual position before import. (file devsunset.scss)
+**/
+/*
+Devsunshine plugin - variables
+-----------------------
+*/
+/* Form control */
+/* width
+* Referential source to design size : https://getbootstrap.com/docs/5.1/layout/grid/
+*/
+/**
+*    @Package devsunshine plugin
+* * Need to test the code in the actual position before import. (file devsunset.scss)
+**/
+/*
+	Devsunshine plugin mixins
+	------------------------------------------------
+*/
+div.custom-cta-container {
+  position: relative;
+}
+div.custom-cta-container div.cta-image-container {
+  font-size: 16px;
+  margin: 0.5em auto;
+  width: 24em;
+  height: 18em;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+div.custom-cta-container div.cta-image-container h3.custom-cta-title {
+  position: absolute;
+  margin: 1em auto;
+  top: 0;
+  z-index: 11;
+  width: inherit;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+div.custom-cta-container div.cta-image-container div.block-editor-inner-blocks {
+  bottom: 0;
+  z-index: 11;
+  position: absolute;
+}
+div.custom-cta-container div.cta-image-container div.cta-image-overlay {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  top: 0;
+  z-index: 10;
+}
+div.custom-cta-container p.custom-cta-description {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  position: relative;
+}
+
+div.gutbcontent-custom-blocks-container {
+  position: relative;
+}
+/*# sourceMappingURL=gutbcontent-gutenberg-blocks.css.map */

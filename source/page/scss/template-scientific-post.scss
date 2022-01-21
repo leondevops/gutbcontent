@@ -1,0 +1,329 @@
+@import '../../resources/bases/variables';
+@import '../../resources/bases/mixins';
+@import '../../resources/bases/icon';   // Menu icon
+
+/** ===  I. General header === **/
+.container-fluid{
+    padding:0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+@media (min-width: $min-sm-width) {
+    .container-fluid > div.row{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        padding:0;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+// Containers for both logo & navigation menu
+div.custom-nav-menu{
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    padding-left: 2em;
+}
+
+/** ===  II. Brand/Logo === **/
+a.custom-logo-link > img {
+    width: 40px;
+    height: 40px;
+}
+
+/** ===  III. Main navigation menu === **/
+
+div.main-nav-menu-scientific{
+    align-items: stretch;
+    background-color: #c0c0c0;
+
+    // 1. unsorted list that contain navigation menu
+    ul.gutbcontent-main-menu-wrapper{
+        // Menu item
+        li.menu-item {
+            display: flex;
+            align-items: center;
+            position: relative;
+        
+            margin-top:0;
+            margin-bottom:0;
+            padding: 0.5em;
+            z-index: 100;
+
+            &.menu-item-has-children > ul.dropdown-menu{
+                position: absolute;
+                top: 0;
+                min-width: auto;
+                left: 100%;
+            }
+
+            &:hover{
+                background-color: lightgray;
+                a {
+                    text-shadow: 2px 2px white;
+                }
+                @include animate(background-color, 350ms);
+            }
+
+            //Toggle class to control show/hide sub-menu
+            ul.sub-menu{
+                display:none;
+                border: 1px solid grey;
+                background-color: #c0c0c0;
+                transform-origin: top;
+                //transform: scale(0,0);
+                @include animate(display, 350ms);
+
+                margin-left:0;
+                padding-left:0;
+
+                &.show{
+                    display:block;
+                    transform-origin:top;
+                    //transform: scale(1,1);
+                    @include animate(display, 350ms);
+                }
+
+                // list item of submenu
+                /* li{
+                    margin-left:0;
+                    padding-left:0;
+                } */
+                @media only screen and (min-width: $min-sm-width){
+                    li {                    
+                        a {
+                            // Don't break the line in at least small-medium screen
+                            white-space: nowrap;
+                        }
+                    }
+                }
+                
+            }//ul.sub-menu
+            
+            // Hyperlink format
+            a {
+                text-decoration:none;
+                color:black;
+                font-weight:500;
+            }
+           
+        }//li.menu-item
+
+        // menu-item has children
+        li.menu-item.menu-item-has-children > ul{
+            margin-top: 0;
+        }
+    
+    }//ul.gutbcontent-main-menu-wrapper
+
+    ul.dropdown-menu.show{
+        padding-top:0;       
+        padding-bottom:0;
+        margin-top:0;
+        margin-bottom:0;
+
+        position: absolute;
+        /*top: 0;*/
+        min-width: auto; 
+    }
+
+    /** 3rd level menu **/
+}
+
+/** === IV. Search form === **/
+
+div.custom-search-box{
+    display: flex;
+    flex-direction: row;
+    /*flex-wrap: wrap;*/
+    align-items: center;
+    align-content: space-between;
+    justify-content: flex-end;
+    margin-left: 0;
+    margin-right: 0;
+
+    /* 1. Search box area */
+    & > .search-form-container{
+    //display: none;
+    display:block;
+    background-color: floralwhite;
+    margin: 0.5em;       
+    flex-shrink: 1;
+    flex-basis: 15em;
+    /*flex-grow: 2;*/
+    /*float: left;*/
+    //@include animate(all, 320ms);
+    transform-origin: right;
+    transform: scaleX(0);
+    @include animate(transform, 350ms);
+
+    &.show{
+        //display: block;
+        //width: 100%;
+        transform-origin: right;
+        transform: scaleX(1);
+        @include animate(transform, 350ms);
+    }
+
+    }
+
+    /* 2. Search box icon */
+    & > .open-search{
+        flex-shrink: 1;
+        padding-right: 0.5em;
+    }
+}
+
+.bi-search svg{
+    width: 1.1rem;
+    height: 1.1rem;
+}
+
+/** === V. Custom Table-of-content - TOC ===**/
+
+div.custom-table-of-content{     
+    padding-left: 1em;
+    padding-right: 1em;
+    /*overflow: scroll;*/
+    background-color: inherit;
+
+    // 1. Menu button
+    span.gutbcontent-menu-icon{
+        border : 1px solid black;
+        background-color: rgba(0,0,0,0.1);
+        top: 0.5em;
+        left: 0.5em;
+        z-index: 2; //on top of custom toc wrapper
+        position:sticky;
+
+        &.gutbcontent-menu-classic{
+            @include animate(transform, 320ms);
+        }
+
+        &.gutbcontent-close-small{
+            transition: opacity .5s ease-in-out;
+            transform: rotate(90deg);
+            //transform-origin: top left;
+            @include animate(transform, 320ms);
+        }
+    }//span.gutbcontent-menu-icon
+
+    div.custom-toc-title{
+        margin-top: 0.5em;
+        margin-left: 0.5em;
+    }
+
+    //3. Plugin menu. 
+    div.custom-toc-wrapper{
+        // top: 1em;
+        // left: 1em;
+        background-color: rgba(0,0,0,0.05);
+        border: 1px solid black;
+        margin-top: 0.5em;    
+        padding-top: 0.5em;
+        z-index: 1;
+        /* Enable overflow scroll to scroll toc */
+        //overflow: scroll;
+        height: 90vh;
+        transform-origin: top left;
+        transform: scale(0, 0);
+        @include animate(transform, 350ms);
+        //scale: 0;
+
+        // Custom TOC content
+        div.custom-toc-list{
+            /* Reserve space for indexed number headings */
+            padding-left: 1rem;
+        }
+
+        &.show{
+            //scale: 1;
+            transform-origin: top left;
+            transform: scale(1,1);
+            @include animate(transform, 350ms);
+        }
+    }//div.custom-toc-wrapper
+
+}
+
+
+
+
+
+ol.custom-toc-ol {
+    /*counter-reset: tocitem;*/ /** Index the TOC items **/
+    padding-left: 1em;
+}
+
+/**======================================================**/
+/*** Label heading (ordered list) using ordered list
+ * - Support 3 level TOC items
+ ***/
+/**======================================================**/
+/** 1. Level 1 **/
+ol.custom-toc-lvl-1 {
+    counter-reset: counterLvl1;
+
+    li{
+        counter-increment: counterLvl1;
+
+        &::marker{
+            content: counter(counterLvl1) ". ";
+        }
+    }
+}
+
+
+/** 2. Level 2 **/
+ol.custom-toc-lvl-2 {
+    counter-reset: counterLvl2;
+
+    li{
+        counter-increment: counterLvl2; /** 2021-Sep - Only this  Temp OK **/
+        &::marker{
+            content: counter(counterLvl1) "." counter(counterLvl2)". ";
+        }
+    }
+}
+
+/** 3. Level 3 **/
+ol.custom-toc-lvl-3 {
+    counter-reset: counterLvl3;
+
+    li{
+        counter-increment: counterLvl3; /** 2021-Sep - Only this  Temp OK **/
+
+        &::marker{
+            content: counter(counterLvl1) "." counter(counterLvl2) "." counter(counterLvl3) ". ";
+        }
+    }
+}
+
+
+/** 4. Level 4 **/
+ol.custom-toc-lvl-4 {
+    counter-reset: counterLvl4;
+
+    li{
+        counter-increment: counterLvl4; /** 2021-Sep - Only this  Temp OK **/
+
+        &::marker{
+            content: counter(counterLvl1) "." counter(counterLvl2) "." counter(counterLvl3) "." counter(counterLvl4) ". ";
+        }
+    }
+}
+
+
+ol.custom-toc-ol li > a {
+    display: block;
+    color: darkblue;
+    text-decoration: none;
+    /*font-weight: bold;*/
+
+}

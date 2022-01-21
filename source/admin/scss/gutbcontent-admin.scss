@@ -1,0 +1,32 @@
+/*
+ * @package Gutbcontent_Plugin
+ * @version 1.0.1
+ */
+
+// Pre-defined modules
+@import 'modules/tabs';
+@import 'modules/checkbox';
+
+@import 'modules/form';
+
+.gutbcontent-admin-panel {
+
+  /*1. Tab navigation - import from modules tabs.scss */
+
+  /*2. Tab content - import from modules tabs.scss*/
+
+  /*3. Format the table header*/
+  tr.ui-toggle{
+    margin: 0 1em;
+
+    th{
+      width: 20em;
+    }
+
+    td {
+      div.ui-toggle {
+        padding-top: 0.2em;
+      }
+    }
+  }//tr.ui-toggle
+}//.devsunshine-admin-panel

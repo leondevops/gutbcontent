@@ -1,0 +1,352 @@
+/**
+*    @Package devsunsettheme
+* * Need to test the code in the actual position before import. (file devsunset.scss)
+**/
+/*
+Devsunshine plugin - variables
+-----------------------
+*/
+/* Form control */
+/* width
+* Referential source to design size : https://getbootstrap.com/docs/5.1/layout/grid/
+*/
+/**
+*    @Package devsunshine plugin
+* * Need to test the code in the actual position before import. (file devsunset.scss)
+**/
+/*
+	Devsunshine plugin mixins
+	------------------------------------------------
+*/
+.gutbcontent-menu-classic {
+  content: url("../../resources/icons/menu-classic.svg");
+  width: 2em;
+  height: 2em;
+  background-color: transparent;
+}
+
+.gubcontent-menu-classic-2 {
+  content: url("../../resources/icons/menu-classic-2.svg");
+  width: 2em;
+  height: 2em;
+  background-color: transparent;
+}
+
+.gubcontent-menu-classic-3 {
+  content: url("../../resources/icons/menu-classic-3.svg");
+  width: 2em;
+  height: 2em;
+  background-color: transparent;
+}
+
+.gutbcontent-menu-list-circle {
+  content: url("../../resources/icons/menu-list-circle.svg");
+  width: 2em;
+  height: 2em;
+  background-color: transparent;
+}
+
+.gutbcontent-menu-list-numbered {
+  content: url("../../resources/icons/menu-list-numbered.svg");
+  width: 2em;
+  height: 2em;
+  background-color: transparent;
+}
+
+.gutbcontent-menu-list-squared {
+  content: url("../../resources/icons/menu-list-squared.svg");
+  width: 2em;
+  height: 2em;
+  background-color: transparent;
+}
+
+.gutbcontent-close-small {
+  content: url("../../resources/icons/close-small.svg");
+  width: 2em;
+  height: 2em;
+  background-color: transparent;
+}
+
+/** ===  I. General header === **/
+.container-fluid {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+@media (min-width: 576px) {
+  .container-fluid > div.row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+div.custom-nav-menu {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: center;
+  padding-left: 2em;
+}
+
+/** ===  II. Brand/Logo === **/
+a.custom-logo-link > img {
+  width: 40px;
+  height: 40px;
+}
+
+/** ===  III. Main navigation menu === **/
+div.main-nav-menu-scientific {
+  align-items: stretch;
+  background-color: #c0c0c0;
+  /** 3rd level menu **/
+}
+div.main-nav-menu-scientific ul.gutbcontent-main-menu-wrapper li.menu-item {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0.5em;
+  z-index: 100;
+}
+div.main-nav-menu-scientific ul.gutbcontent-main-menu-wrapper li.menu-item.menu-item-has-children > ul.dropdown-menu {
+  position: absolute;
+  top: 0;
+  min-width: auto;
+  left: 100%;
+}
+div.main-nav-menu-scientific ul.gutbcontent-main-menu-wrapper li.menu-item:hover {
+  background-color: lightgray;
+  /* Source transition :
+  * https://css-tricks.com/almanac/properties/t/transition/
+  */
+  transition: background-color 350ms ease;
+}
+div.main-nav-menu-scientific ul.gutbcontent-main-menu-wrapper li.menu-item:hover a {
+  text-shadow: 2px 2px white;
+}
+div.main-nav-menu-scientific ul.gutbcontent-main-menu-wrapper li.menu-item ul.sub-menu {
+  display: none;
+  border: 1px solid grey;
+  background-color: #c0c0c0;
+  transform-origin: top;
+  /* Source transition :
+  * https://css-tricks.com/almanac/properties/t/transition/
+  */
+  transition: display 350ms ease;
+  margin-left: 0;
+  padding-left: 0;
+  /* li{
+      margin-left:0;
+      padding-left:0;
+  } */
+}
+div.main-nav-menu-scientific ul.gutbcontent-main-menu-wrapper li.menu-item ul.sub-menu.show {
+  display: block;
+  transform-origin: top;
+  /* Source transition :
+  * https://css-tricks.com/almanac/properties/t/transition/
+  */
+  transition: display 350ms ease;
+}
+@media only screen and (min-width: 576px) {
+  div.main-nav-menu-scientific ul.gutbcontent-main-menu-wrapper li.menu-item ul.sub-menu li a {
+    white-space: nowrap;
+  }
+}
+div.main-nav-menu-scientific ul.gutbcontent-main-menu-wrapper li.menu-item a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+div.main-nav-menu-scientific ul.gutbcontent-main-menu-wrapper li.menu-item.menu-item-has-children > ul {
+  margin-top: 0;
+}
+div.main-nav-menu-scientific ul.dropdown-menu.show {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  position: absolute;
+  /*top: 0;*/
+  min-width: auto;
+}
+
+/** === IV. Search form === **/
+div.custom-search-box {
+  display: flex;
+  flex-direction: row;
+  /*flex-wrap: wrap;*/
+  align-items: center;
+  align-content: space-between;
+  justify-content: flex-end;
+  margin-left: 0;
+  margin-right: 0;
+  /* 1. Search box area */
+  /* 2. Search box icon */
+}
+div.custom-search-box > .search-form-container {
+  display: block;
+  background-color: floralwhite;
+  margin: 0.5em;
+  flex-shrink: 1;
+  flex-basis: 15em;
+  /*flex-grow: 2;*/
+  /*float: left;*/
+  transform-origin: right;
+  transform: scaleX(0);
+  /* Source transition :
+  * https://css-tricks.com/almanac/properties/t/transition/
+  */
+  transition: transform 350ms ease;
+}
+div.custom-search-box > .search-form-container.show {
+  transform-origin: right;
+  transform: scaleX(1);
+  /* Source transition :
+  * https://css-tricks.com/almanac/properties/t/transition/
+  */
+  transition: transform 350ms ease;
+}
+div.custom-search-box > .open-search {
+  flex-shrink: 1;
+  padding-right: 0.5em;
+}
+
+.bi-search svg {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+/** === V. Custom Table-of-content - TOC ===**/
+div.custom-table-of-content {
+  padding-left: 1em;
+  padding-right: 1em;
+  /*overflow: scroll;*/
+  background-color: inherit;
+}
+div.custom-table-of-content span.gutbcontent-menu-icon {
+  border: 1px solid black;
+  background-color: rgba(0, 0, 0, 0.1);
+  top: 0.5em;
+  left: 0.5em;
+  z-index: 2;
+  position: -webkit-sticky;
+  position: sticky;
+}
+div.custom-table-of-content span.gutbcontent-menu-icon.gutbcontent-menu-classic {
+  /* Source transition :
+  * https://css-tricks.com/almanac/properties/t/transition/
+  */
+  transition: transform 320ms ease;
+}
+div.custom-table-of-content span.gutbcontent-menu-icon.gutbcontent-close-small {
+  transition: opacity 0.5s ease-in-out;
+  transform: rotate(90deg);
+  /* Source transition :
+  * https://css-tricks.com/almanac/properties/t/transition/
+  */
+  transition: transform 320ms ease;
+}
+div.custom-table-of-content div.custom-toc-title {
+  margin-top: 0.5em;
+  margin-left: 0.5em;
+}
+div.custom-table-of-content div.custom-toc-wrapper {
+  background-color: rgba(0, 0, 0, 0.05);
+  border: 1px solid black;
+  margin-top: 0.5em;
+  padding-top: 0.5em;
+  z-index: 1;
+  /* Enable overflow scroll to scroll toc */
+  height: 90vh;
+  transform-origin: top left;
+  transform: scale(0, 0);
+  /* Source transition :
+  * https://css-tricks.com/almanac/properties/t/transition/
+  */
+  transition: transform 350ms ease;
+}
+div.custom-table-of-content div.custom-toc-wrapper div.custom-toc-list {
+  /* Reserve space for indexed number headings */
+  padding-left: 1rem;
+}
+div.custom-table-of-content div.custom-toc-wrapper.show {
+  transform-origin: top left;
+  transform: scale(1, 1);
+  /* Source transition :
+  * https://css-tricks.com/almanac/properties/t/transition/
+  */
+  transition: transform 350ms ease;
+}
+
+ol.custom-toc-ol {
+  /*counter-reset: tocitem;*/
+  /** Index the TOC items **/
+  padding-left: 1em;
+}
+
+/**======================================================**/
+/*** Label heading (ordered list) using ordered list
+ * - Support 3 level TOC items
+ ***/
+/**======================================================**/
+/** 1. Level 1 **/
+ol.custom-toc-lvl-1 {
+  counter-reset: counterLvl1;
+}
+ol.custom-toc-lvl-1 li {
+  counter-increment: counterLvl1;
+}
+ol.custom-toc-lvl-1 li::marker {
+  content: counter(counterLvl1) ". ";
+}
+
+/** 2. Level 2 **/
+ol.custom-toc-lvl-2 {
+  counter-reset: counterLvl2;
+}
+ol.custom-toc-lvl-2 li {
+  counter-increment: counterLvl2;
+  /** 2021-Sep - Only this  Temp OK **/
+}
+ol.custom-toc-lvl-2 li::marker {
+  content: counter(counterLvl1) "." counter(counterLvl2) ". ";
+}
+
+/** 3. Level 3 **/
+ol.custom-toc-lvl-3 {
+  counter-reset: counterLvl3;
+}
+ol.custom-toc-lvl-3 li {
+  counter-increment: counterLvl3;
+  /** 2021-Sep - Only this  Temp OK **/
+}
+ol.custom-toc-lvl-3 li::marker {
+  content: counter(counterLvl1) "." counter(counterLvl2) "." counter(counterLvl3) ". ";
+}
+
+/** 4. Level 4 **/
+ol.custom-toc-lvl-4 {
+  counter-reset: counterLvl4;
+}
+ol.custom-toc-lvl-4 li {
+  counter-increment: counterLvl4;
+  /** 2021-Sep - Only this  Temp OK **/
+}
+ol.custom-toc-lvl-4 li::marker {
+  content: counter(counterLvl1) "." counter(counterLvl2) "." counter(counterLvl3) "." counter(counterLvl4) ". ";
+}
+
+ol.custom-toc-ol li > a {
+  display: block;
+  color: darkblue;
+  text-decoration: none;
+  /*font-weight: bold;*/
+}
+/*# sourceMappingURL=template-scientific-post.css.map */

@@ -1,0 +1,54 @@
+
+@import 'bases/variables';
+@import 'bases/mixins';
+
+div.custom-cta-container{ 
+  // 1. Title
+  position: relative;
+
+  // 2. Featured image container
+  div.cta-image-container {
+    font-size: 16px;
+    margin: 0.5em auto;
+    width:24em;
+    height:18em;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position:relative;       
+    
+    // title
+    h3.custom-cta-title{
+      position:absolute;
+      margin: 1em auto;
+      top:0;
+      z-index:11;
+      width: inherit; // inherit the same width as parent div
+      //text-align: center; // assign manually
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    }
+    
+    // Inner block component (Button block)
+    div.block-editor-inner-blocks {
+      bottom:0;
+      z-index:11;
+      position: absolute;      
+    }
+
+    // Color overlay
+    div.cta-image-overlay{
+      position:absolute;
+      width: inherit;
+      height: inherit;
+      top:0;
+      z-index:10;            
+    }    
+  }//div.cta-image-container .custom-cta-description
+  
+  p.custom-cta-description{
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    position:relative;
+  }
+  
+}//div.custom-cta-container

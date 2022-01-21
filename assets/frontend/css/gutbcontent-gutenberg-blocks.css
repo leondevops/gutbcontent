@@ -1,0 +1,75 @@
+/**
+*    @Package devsunsettheme
+* * Need to test the code in the actual position before import. (file devsunset.scss)
+**/
+/*
+Devsunshine plugin - variables
+-----------------------
+*/
+/* Form control */
+/* width
+* Referential source to design size : https://getbootstrap.com/docs/5.1/layout/grid/
+*/
+/**
+*    @Package devsunshine plugin
+* * Need to test the code in the actual position before import. (file devsunset.scss)
+**/
+/*
+	Devsunshine plugin mixins
+	------------------------------------------------
+*/
+div.gutbcontent-wrapper.custom-cta-container div.gutbcontent-featured-image {
+  font-size: 16px;
+  width: 32em;
+  height: 24em;
+  margin: 0 auto;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+div.gutbcontent-wrapper.custom-cta-container div.gutbcontent-featured-image h3 {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  right: 1em;
+  padding: 0.25em;
+  z-index: 11;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+div.gutbcontent-wrapper.custom-cta-container div.gutbcontent-featured-image div.wp-block-button {
+  position: absolute;
+  bottom: 1em;
+  z-index: 11;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+div.gutbcontent-wrapper.custom-cta-container div.gutbcontent-featured-image div.wp-block-button a {
+  left: 0;
+  right: 0;
+  margin: 1em auto;
+  z-index: 12;
+}
+div.gutbcontent-wrapper.custom-cta-container div.gutbcontent-featured-image div.cta-image-overlay {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  z-index: 10;
+}
+div.gutbcontent-wrapper.custom-cta-container p.custom-cta-description {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+div.gutbcontent-custom-blocks-container {
+  position: relative;
+}
+/*# sourceMappingURL=gutbcontent-gutenberg-blocks.css.map */

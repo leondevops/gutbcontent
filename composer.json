@@ -1,0 +1,21 @@
+{
+    "name": "vnlab/gutbcontent",
+    "description": "A development WordPress plugin to add customized content for WordPress website. Users can display WordPress site using custom widgets (widget/sidebar areas), shortcode, custom content blocks, and pages/posts templates (for posts,pages types)",
+    "type": "project",
+    "license": "GPLv2",
+    "autoload": {
+        "psr-4": {            
+            "Vnlab\\Gutbcontent\\": "/",
+            "Vnlab\\Gutbcontent\\Src\\": "source",
+            "Vnlab\\Gutbcontent\\Inc\\": "include",
+            "Vnlab\\Gutbcontent\\Troubleshoot\\": "troubleshoot"            
+        }
+    },
+    "authors": [
+        {
+            "name": "leondevops",
+            "email": "sonnh2109@gmail.com"
+        }
+    ],
+    "require": {}
+}

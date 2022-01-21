@@ -1,0 +1,134 @@
+/*
+ * @package Gutbcontent_Plugin
+ * @version 1.0.1
+ */
+.gutbcontent-admin-panel {
+  /*1. Tab navigation */
+  /*2. Tab content*/
+}
+.gutbcontent-admin-panel .nav-tabs {
+  float: left;
+  width: 100%;
+  margin: 0;
+  list-style-type: none;
+  border-bottom: 1px solid transparent;
+}
+.gutbcontent-admin-panel .nav-tabs > li {
+  float: left;
+  margin-bottom: -1px;
+}
+.gutbcontent-admin-panel .nav-tabs > li > a {
+  margin-right: 2px;
+  line-height: 1.5;
+  padding: 0.4em;
+  border: 1px solid transparent;
+  border-radius: 4px 4px 0 0;
+  float: left;
+  text-decoration: none;
+}
+.gutbcontent-admin-panel .nav-tabs > li > a:hover {
+  border-color: #eee #eee #ddd;
+}
+.gutbcontent-admin-panel .nav-tabs > li.active > a, .gutbcontent-admin-panel .nav-tabs > li.active > a:hover, .gutbcontent-admin-panel .nav-tabs > li.active > a:focus {
+  color: #555;
+  cursor: default;
+  background-color: #fff;
+  /*border: 1px solid #ddd;
+  border-bottom-color: transparent;*/
+}
+.gutbcontent-admin-panel .tab-content {
+  /*div#tab-1, div#tab-2, div#tab-3{
+    scroll-margin-top: 50em;
+  }*/
+}
+.gutbcontent-admin-panel .tab-content > .tab-pane {
+  float: left;
+  display: none;
+  width: 100%;
+  /* Apply this position to always below sticky header / header elements
+   https://markus.oberlehner.net/blog/simple-solution-for-anchor-links-behind-sticky-headers/
+   */
+  scroll-margin-top: 50em;
+}
+.gutbcontent-admin-panel .tab-content > .tab-pane.active {
+  float: left;
+  padding: 0.4em;
+  display: block;
+  background-color: #fff;
+  width: 100%;
+  box-shadow: 0 5px 4px -2px rgba(0, 0, 0, 0.15);
+}
+
+div.ui-toggle {
+  margin: 0;
+  padding: 0;
+  /* Original checkbox - very important */
+  /* Call with .item-checkbox-label class to differentiate between ui toggle label */
+  text-align: center;
+  width: 56px;
+  height: 26px;
+  display: inline-block;
+  position: relative;
+}
+div.ui-toggle input[type=checkbox] {
+  display: none;
+}
+div.ui-toggle input[type=checkbox]:checked + label {
+  align-items: flex-end;
+  border-color: #427CDC;
+  background: #427CDC;
+  box-shadow: inset 0 0 0 10px on-color;
+  transition: all 200ms ease;
+}
+div.ui-toggle input[type=checkbox]:checked + label > div {
+  margin-left: 20px;
+}
+div.ui-toggle label {
+  transition: all 200ms ease;
+  display: inline-block;
+  align-items: flex-start;
+  position: relative;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background: #374140;
+  box-shadow: inset 0 0 0 0 #427CDC;
+  border: 2px solid #374140;
+  border-radius: 22px;
+  width: 40px;
+  height: 22px;
+}
+div.ui-toggle label div {
+  transition: all 200ms ease;
+  background: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  left: 0;
+  right: auto;
+}
+div.ui-toggle label:hover, div.ui-toggle label > div:hover {
+  cursor: pointer;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.gutbcontent-admin-panel {
+  /*1. Tab navigation - import from modules tabs.scss */
+  /*2. Tab content - import from modules tabs.scss*/
+  /*3. Format the table header*/
+}
+.gutbcontent-admin-panel tr.ui-toggle {
+  margin: 0 1em;
+}
+.gutbcontent-admin-panel tr.ui-toggle th {
+  width: 20em;
+}
+.gutbcontent-admin-panel tr.ui-toggle td div.ui-toggle {
+  padding-top: 0.2em;
+}
+/*# sourceMappingURL=gutbcontent-admin.css.map */

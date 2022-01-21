@@ -1,0 +1,86 @@
+
+
+
+.gutbcontent-admin-panel {
+
+  /*1. Tab navigation */
+  .nav-tabs {
+    float: left;
+    width: 100%;
+    margin:0;
+    list-style-type: none;
+    border-bottom: 1px solid transparent;
+
+    // 1. Styling the casual list item
+    & > li{
+      float:left;
+      margin-bottom: -1px;
+    }// & > li
+
+    & > li > a {
+      margin-right:2px;
+      line-height: 1.5;
+      padding:0.4em;
+      border: 1px solid transparent;
+      border-radius: 4px 4px 0 0;
+      float:left;
+      text-decoration:none;
+      //scroll-padding-top: 50em;
+
+      &:hover{
+        border-color: #eee #eee #ddd;
+      }
+
+
+    }// & > li > a
+
+    // 2. Styling the active list item:
+    & > li.active {
+
+    }//& > li.active
+
+    & > li.active > a {
+
+      &, &:hover, &:focus{
+        color: #555;
+        cursor: default;
+        background-color: #fff;
+        /*border: 1px solid #ddd;
+        border-bottom-color: transparent;*/
+      }
+
+    }//& > li.active > a
+
+  }//.nav-tabs
+
+  /*2. Tab content*/
+  .tab-content{
+
+
+    & > .tab-pane{
+      float:left;
+      display:none;
+      width: 100%;
+      /* Apply this position to always below sticky header / header elements
+       https://markus.oberlehner.net/blog/simple-solution-for-anchor-links-behind-sticky-headers/
+       */
+      scroll-margin-top: 50em;  // scroll margin top 50 when navigate with anchor link
+    }//.tab-pane
+
+    & > .tab-pane.active{
+      float:left;
+      padding:0.4em;
+      display:block;
+      background-color: #fff;
+      width: 100%;
+      box-shadow: 0 5px 4px -2px rgba(0, 0, 0, 0.15);
+    }
+
+    /*div#tab-1, div#tab-2, div#tab-3{
+      scroll-margin-top: 50em;
+    }*/
+
+  }//.tab-content
+
+
+}//.devsunshine-admin-panel

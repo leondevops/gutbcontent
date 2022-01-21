@@ -1,0 +1,28 @@
+/**
+*    @Package devsunsettheme
+* * Need to test the code in the actual position before import. (file devsunset.scss)
+**/
+/*
+Devsunshine plugin - variables
+-----------------------
+*/
+
+
+/* Form control */
+$background-form-color: #656565;
+$input-field-underline-color: #cbcbcb;
+
+/* width
+* Referential source to design size : https://getbootstrap.com/docs/5.1/layout/grid/
+*/
+$max-xs-width: 575px;
+$max-sm-width: 767px;
+$max-md-width: 991px;
+$max-lg-width: 1199px;
+$max-xl-width: 1399px;
+
+$min-sm-width: 576px;
+$min-md-width: 768px;
+$min-lg-width: 992px;
+$min-xl-width: 1200px;
+$min-xxl-width: 1400px;
